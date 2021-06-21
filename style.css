@@ -1,0 +1,34 @@
+body {
+  background-color: #f0f0f0;
+}
+.container {
+  width: 400px;
+  margin: 120px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  text-align: center;
+  color: #626377;
+}
+
+.container ul {
+    /* since ul element is block-level element and it will still hold the whole section even if centered */
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.avatar {
+  border-radius: 100px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 0 0 13px #f0f0f0;
+}
+
+.avatar img {
+  border-radius: 100px;
+}
