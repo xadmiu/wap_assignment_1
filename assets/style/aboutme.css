@@ -1,0 +1,104 @@
+:root {
+    --bg-color: #303830;
+    --text-color: #fff;
+    --primary-color: #699af2;
+    --active-color: #db4848;
+    --secondary-color: #9acd32;
+}
+
+* {
+    line-height: 30px;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+header p {
+    font-family: monospace;
+}
+
+header p strong:nth-child(2) {
+    font: oblique 600 26px fantasy;
+    color: yellow;
+    text-transform: uppercase;
+}
+
+header p strong:nth-child(2)::before {
+    content: "Eth";
+    color: green;
+}
+
+header p strong:nth-child(2)::after {
+    content: "pia";
+    color: red;
+}
+
+header p strong:nth-child(1) {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+h1, h3 {
+    color: var(--primary-color);
+    letter-spacing: .1em;
+}
+
+a {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p::first-letter {
+    font-family: Georgia;
+    font-size: 30px;
+}
+
+.movies dt {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li:before {
+    font-family: "Font Awesome 5 Free";
+    padding-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    font-weight: 900;
+ }
+
+ ul li.done:before {
+    content: "\f058";
+    color: #81ff81;
+ }
+
+ ul li.pending:before {
+    content: "\f110";
+    color: #4bb7e2;
+ }
+
+ ul li.future:before {
+    content: "\f410";
+    color: #ba8dff;
+ }
+/* This was what we would do with css if we don't have the reveresed attribute */
+/* 
+ol {
+    list-style-type:none;
+    counter-reset:item 5;
+}
+ol > li {
+    counter-increment:item -1;
+}
+ol > li:before {
+    content: counter(item);
+} */
