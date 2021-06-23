@@ -8,6 +8,7 @@ body {
     color: var(--text-color);
     font-family: Georgia, Garamond;
     font-size: 11pt;
+    background: url('https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg');
 }
 
 a {
@@ -51,4 +52,13 @@ body > header {
 
 footer {
     font-family: monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: url('https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif');
+    margin-right: 
 }
