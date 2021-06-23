@@ -52,6 +52,11 @@ body > h1 {
 
 .container dl {
     padding: 10px;
+    color: #424e49;
+}
+
+.container aside dt {
+    font-weight: bold;
 }
 
 .container aside dd {
@@ -103,6 +108,10 @@ section .content {
     margin-right: 5px;
 }
 
+.content .review > p:nth-child(2) {
+    color: #424e49;
+}
+
 .container > p:last-child {
     background: #5ca85c;
     margin: 0;
@@ -113,6 +122,8 @@ section .content {
     width: 100%;
     border-bottom-left-radius: 28px;
     border-bottom-right-radius: 28px;
+    text-align: center;
+    color: #424e49;
 }
 
 .w3c-validators {
