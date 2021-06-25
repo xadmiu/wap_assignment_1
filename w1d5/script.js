@@ -53,6 +53,11 @@
         return arr.filter(str => str.length > i);
     }
 
+    const a = [1,3,5,3,3]; 
+    console.log(a.map(e => e * 10));
+    console.log(a.filter(e => e === 3));
+    console.log(a.reduce((p, n) => p * n, 1));
+
 
     /* Test cases */
     myFunctionTest(20, max(20, 10));
