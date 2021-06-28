@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Form Two</title>
+    <style>
+        li {
+            color: #fff !important;
+            border-left:  1px solid #fff;
+        }
+
+        a {
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #4b85cd !important; color: #fff">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MUM Golden Dome Market:::SRM System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Suppliers</a>
+              </li>
+            </ul>
+            <form class="d-flex" style="position: flex;align-items: baseline !important">
+              <p style="margin-right: 15px">Hello</p>
+              <button class="btn btn-secondary" type="submit">Sign out</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="row" style="padding: 20px">
+        <div class="cols col-md-6">
+            <div class="mb-3">
+                <label for="product" class="form-label">Product Number</label>
+                <input type="text" class="form-control" id="product">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="unit" class="form-label">Unit Price</label>
+                <input type="number" class="form-control" id="unit" value="0.0">
+            </div>
+        </div>
+        <div class="cols col-md-6">
+            <div class="mb-3">
+                <label for="unit" class="form-label">Quantity in stock</label>
+                <input type="number" class="form-control" id="unit" value="0">
+            </div>
+            <div class="mb-3">
+                <label for="unit" class="form-label">Supplier:</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select a supplier</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="unit" class="form-label">Date supplied</label>
+                <input type='text' class="form-control" value="yyyy-mm-dd"/>                 
+                <div id="dateHelp" class="form-text">Enter a valid Date.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="float-right">
+                <button type="button ml-3" class="btn btn-outline-info" style="float:right;margin-left: 15px">Add Product</button>
+                <button type="button ml-3" class="btn btn-outline-danger" style="float:right;margin-left: 15px">Cancel</button>
+                <button type="button ml-3" class="btn btn-outline-primary" style="float:right;margin-left: 15px">Reset</button>
+            </div>
+        </div>
+    </div>
+      
+</body>
+</html>
