@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2d1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+
+    </script>
+    <script src="./script.js"></script>
+
+    <script>
+        describe("sum", () => {
+            it("should return sum of numbers in the array",
+                () => {
+                    assert.equal(10, sum([1, 2, 3, 4]));
+                });
+        });
+
+        describe("multiply", () => {
+            it("should return product of numbers in the array",
+                () => {
+                    assert.equal(24, multiply([1, 2, 3, 4]));
+                });
+        });
+
+        describe("reverse", () => {
+            it("should reverse a string",
+                () => {
+                    assert.equal("dcba", reverse("abcd"));
+                });
+        });
+
+        describe("filterLongWords", () => {
+            it("should returns the array of words that are longer than i",
+                () => {
+                    assert.deepEqual(['abcd', "76544"], filterLongWords(['abcd', "abc", "76544"], 3));
+                });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+
+    </script>
+</body>
+</html>
