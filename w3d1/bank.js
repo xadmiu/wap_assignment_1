@@ -27,8 +27,7 @@ class Bank {
     }
 
     endOfMonth() {
-        console.log(this._accounts);
-        return this._accounts.map(acc => acc.endOfMonth())
-                            .join("\n");
+        console.log(this._accounts.map(acc => acc.endOfMonth())
+        .join("\n"));
     }
 }

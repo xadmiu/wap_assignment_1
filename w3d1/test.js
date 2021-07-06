@@ -249,6 +249,8 @@ describe("Bank", () => {
                 let accountSpy = chai.spy.on(Account.prototype, 'endOfMonth');
                 let savingAccountSpy = chai.spy.on(SavingsAccount.prototype, 'endOfMonth');
                 let checkingAccountSpy = chai.spy.on(CheckingAccount.prototype, 'endOfMonth');
+
+                let consoleSpy = chai.spy.on(console, 'log');
                 bank.addAccount();
                 bank.addSavingAccount(7);
                 bank.addCheckingAccount(50);
@@ -261,7 +263,7 @@ describe("Bank", () => {
                 chai.expect(savingAccountSpy).to.have.been.called();
                 chai.expect(checkingAccountSpy).to.have.been.called();
 
-
+                chai.expect(consoleSpy).to.have.been.called.with(`\nInterest added SavingAccount 2: balance 107 Interset: 7\n`);
             });
     })
 });
