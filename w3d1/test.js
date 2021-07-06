@@ -242,4 +242,26 @@ describe("Bank", () => {
                 assert.equal(bank.accountReport(), `${accountStr}\n${savingAccountStr}\n${checkingAccountStr}`);
             });
     })
+
+    describe("endOfMonth", () => {
+        it("should call `endOfMonth` of all accounts",
+            () => {
+                let accountSpy = chai.spy.on(Account.prototype, 'endOfMonth');
+                let savingAccountSpy = chai.spy.on(SavingsAccount.prototype, 'endOfMonth');
+                let checkingAccountSpy = chai.spy.on(CheckingAccount.prototype, 'endOfMonth');
+                bank.addAccount();
+                bank.addSavingAccount(7);
+                bank.addCheckingAccount(50);
+
+                // deposit to saving account not to have error on interest adding
+                bank.getAccounts()[1].deposit(100);
+                bank.endOfMonth();
+            
+                chai.expect(accountSpy).to.have.been.called();
+                chai.expect(savingAccountSpy).to.have.been.called();
+                chai.expect(checkingAccountSpy).to.have.been.called();
+
+
+            });
+    })
 });
