@@ -18,7 +18,7 @@
                 started = false;
                 setTimeout(function() {
                     alert("Sorry, you lose :(");
-                }, 1);
+                }, 0);
             }
         });
 
