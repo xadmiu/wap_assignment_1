@@ -4,15 +4,20 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index');
+const products = [
+    { id: 1, name: 'Laptop', description: "this is laptop", price: 1200},
+    { id: 3, name: 'Refrigerator', description: "this is refrigrator", price: 500},
+]
+app.get('/products', (req, res) => {
+    res.render('product', {data: { products }});
 });
 
-app.post('/addToCard', (req, res) => {
-    const name = req.body.name || 'Person';
-    const age = req.body.age || 40;
+app.get('/shoppingcart', (req, res) => {
+    res.render('shoppingcart', {data: { products }});
+});
 
-    res.render('result', {data: { name, age }});
+app.post('/addToCart', (req, res) => {
+    // TODO
 });
 
 app.listen(3000, () => {
